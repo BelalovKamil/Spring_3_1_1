@@ -1,2 +1,4 @@
-package web.model;public class Role {
+package web.model;
+
+public class Role {
 }

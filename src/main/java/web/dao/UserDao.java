@@ -15,4 +15,8 @@ public interface UserDao {
     List<User> getAllUsers();
 
     User getUserById(long id);
+
+    User getUserByName (String name);
+
+    void factoryReset();
 }

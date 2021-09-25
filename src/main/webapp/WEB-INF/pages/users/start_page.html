@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Let`s do it</title>
 </head>
 <body>
-$END$
+<div align="center">
+    <a th:href="@{/user}">Let`s do it</a>
+    <br>
+    <br>
+    <a th:href="@{/reset}">Factory reset</a>
+</div>
 </body>
 </html>

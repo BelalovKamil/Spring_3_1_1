@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Домашняя страница</title>
 </head>
 <body>
-$END$
+<table border="1" align="center" width="100%">
+    <tr>
+        <h1 align="center">Ваши данные:</h1>
+        <th width="20%">Имя</th>
+        <th width="20%">Фамилия</th>
+        <th width="20%">E-mail</th>
+    </tr>
+    <tr>
+        <td th:text="${user.getName()}">Имя</td>
+        <td th:text="${user.getSurname()}">Фамилия</td>
+        <td th:text="${user.getEmail()}">E-mail</td>
+    </tr>
+</table>
+<br>
+<br>
+<div align="center">
+    <a th:href="@{/logout}">Выйти</a>
+</div>
 </body>
 </html>

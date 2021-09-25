@@ -6,7 +6,7 @@
 </head>
 <body>
 <div align="center" style="line-height: 1.5;">
-    <form th:method="POST" th:action="@{/users}" th:object="${user}">
+    <form th:method="POST" th:action="@{/admin/users}" th:object="${user}">
         <h1>Создать пользователя</h1>
         <label for="name">Введите имя</label> <br>
         <input type="text" th:field="*{name}" id="name" placeholder="name"><br>
@@ -14,9 +14,16 @@
         <input type="text" th:field="*{surname}" id="surname" placeholder="surname"><br>
         <label for="email">Введите e-mail</label> <br>
         <input type="text" th:field="*{email}" id="email" placeholder="e-mail"> <br>
+        <label for="email">Введите пароль</label> <br>
+        <input type="text" th:field="*{password}" id="password" placeholder="password"> <br>
         <br>
         <input type="submit" value="Создать пользователя"/><br>
     </form>
+</div>
+<br>
+<br>
+<div align="center">
+    <a th:href="@{/logout}">Выйти</a>
 </div>
 </body>
 </html>

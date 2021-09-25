@@ -15,4 +15,8 @@ public interface UserService {
     void updateUserById(long id, User user);
 
     User getUserById(long id);
+
+    User getUserByName (String name);
+
+    void factoryReset();
 }

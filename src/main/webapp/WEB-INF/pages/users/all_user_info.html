@@ -20,15 +20,18 @@
         <td th:utext="${user.getSurname()}">Фамилия</td>
         <td th:utext="${user.getEmail()}">E-mail</td>
         <td>
-            <a th:href="@{/users/remove/{id}(id=${user.getId()})}">Удалить</a>
+            <a th:href="@{/admin/users/remove/{id}(id=${user.getId()})}">Удалить</a>
             <br>
-            <a th:href="@{/users/{id}/edit(id=${user.getId()})}">Редактировать</a>
+            <a th:href="@{/admin/users/{id}/edit(id=${user.getId()})}">Редактировать</a>
         </td>
     </tr>
 </table>
 <br>
 <div align="center">
-    <a th:href="@{/users/new}">Создать нового пользователя</a>
+    <a th:href="@{/admin/users/new}">Создать нового пользователя</a>
+    <br>
+    <br>
+    <a th:href="@{/logout}">Выйти</a>
 </div>
 </body>
 </html>

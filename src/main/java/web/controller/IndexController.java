@@ -15,7 +15,7 @@ public class IndexController {
 
     @GetMapping("/")
     public String startPage() {
-        return "users/start_page";
+        return "start_page";
     }
 
     @GetMapping("/reset")

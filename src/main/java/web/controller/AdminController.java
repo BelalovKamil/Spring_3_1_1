@@ -19,7 +19,7 @@ public class AdminController {
     @GetMapping
     public String userTablePage(Model model) {
         model.addAttribute("users", userService.getAllUsers());
-        return "users/all_user_info";
+        return "all_user_info";
     }
 
     @PostMapping("/users")
@@ -30,7 +30,7 @@ public class AdminController {
 
     @GetMapping("/users/new")
     public String newUser(@ModelAttribute("user") User user) {
-        return "users/new";
+        return "new";
     }
 
 
@@ -43,7 +43,7 @@ public class AdminController {
     @GetMapping("/users/{id}/edit")
     public String edit(Model model, @PathVariable("id") int id){
         model.addAttribute("user", userService.getUserById(id));
-        return "users/edit";
+        return "edit";
     }
 
     @PatchMapping("/users/{id}")
